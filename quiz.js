@@ -26,7 +26,7 @@ const questions = [
         answers: [
             { text: "if (age >= 18 && <= 65)", correct: false },
             { text: "if (18 <= age <= 65)", correct: false },
-            { text: "if (age => 18 && age =< 65)", correct: false },
+            { text: "if (age >= 18 && age >= 65)", correct: false },
             { text: "if (age >= 18 && age <= 65)", correct: true },
         ]
     },
