@@ -67,7 +67,22 @@ function resetState() {
     answerButtons.innerHTML = '';
 }
 
-function selectAnswer(answer, button){
+function selectAnswer(answer, button) {
+    if (answer.correct) {
+        // if the answer is correct turn the button into green background color
+        button.style.backgroundColor = "green";
+        // update the score
+        score++
+    } else {
+        // if the answer is wrong turn the button into red background color
+        button.style.backgroundColor = "red"
+    }
+
+    // move to the next question after 2 seconds
+    setTimeout(() => {
+        currentQuestionIndex++; // increase the index to move to the next question
+        showQuestion();
+    }, 2000)
 
 }
 
