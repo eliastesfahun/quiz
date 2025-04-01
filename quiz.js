@@ -45,4 +45,30 @@ function startQuiz() {
     score = 0
     showQuestion()
 }
+function showQuestion() {
+    resetState();
+    if (currentQuestionIndex < questions.length) {
+        let currentQuestion = questions[currentQuestionIndex];
+        questionElement.textContent = currentQuestion.question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement('button');
+            button.textContent = answer.text;
+            button.classList.add('btn');
+            button.addEventListener("click",()=> selectAnswer(answer, button));
+            answerButtons.appendChild(button)
+        })
+    } else {
+        showScore()
+    }
+}
+
+function resetState() {
+    answerButtons.innerHTML = '';
+}
+
+function selectAnswer(answer, button){
+    
+}
+
 
