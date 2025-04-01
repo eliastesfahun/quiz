@@ -39,3 +39,10 @@ const scoreElement = document.getElementById("score");
 
 let score = 0;
 let currentQuestionIndex = 0;
+
+function startQuiz() {
+    currentQuestionIndex = 0
+    score = 0
+    showQuestion()
+}
+
