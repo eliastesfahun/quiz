@@ -90,3 +90,8 @@ function showScore() {
     questionElement.innerHTML = `Quiz Over! you scored ${score} out of ${questions.length}.`;
     answerButtons.innerHTML = '';
 }
+
+// strat the quiz
+
+startQuiz()
+
